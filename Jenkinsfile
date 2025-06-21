@@ -36,7 +36,7 @@ pipeline {
                
         stage('Deploy to EC2') {
             steps {
-                sshAgent(credentials: ['ec2-server-key']) {
+                sshagent(credentials: ['ec2-server-key']) {
                     script {
                         def remoteUser = "ec2-user"
                         def remoteHost = "3.95.158.229"
