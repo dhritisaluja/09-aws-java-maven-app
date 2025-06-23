@@ -48,7 +48,7 @@ pipeline {
             steps {
                 script {
                    echo 'building docker image and publishing it to Docker Hub..'
-                   buildImage(dhritisaluja/demo-app:java-maven-env.IMAGE_TAG)
+                   buildImage("dhritisaluja/demo-app:java-maven-${env.IMAGE_TAG}")
                 }
             }
         }
